@@ -5,20 +5,23 @@ var sequelize = require("../config/connection.js");
 
 
 
-var burgers_table = sequelize.define("burgers_table", {
+var Level3 = sequelize.define("level3", {
 	id: {
 		type: Sequelize.INTEGER,
 		autoIncrement: true,
 		primaryKey: true
 	},
-	burger_name: {
+	partName: {
 		type: Sequelize.STRING
 	},
-	devoured: {
+	partDescription: {
 		type: Sequelize.BOOLEAN
 	},
-	date: {
-		type: Sequelize.DATE
+	threeFromtwo:{
+		type:Sequelize.INTEGER
+	},
+	threeTofour:{
+		type:Sequelize.INTEGER
 	}
 
 
@@ -28,7 +31,7 @@ freezeTableName: true
 });
 
 
-burgers_table.sync({force: true});
+Level3.sync();
 
 
 
@@ -36,4 +39,4 @@ burgers_table.sync({force: true});
 
 
 
-module.exports = burgers_table;
+module.exports = Level3;

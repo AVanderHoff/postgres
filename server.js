@@ -1,6 +1,5 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var methodOverride = require('method-override')
 var app = express();
 
 var PORT = process.env.PORT || 80;
@@ -11,14 +10,8 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 
-app.use(methodOverride('_method'))
-var exphbs = require('express-handlebars');
-app.engine('handlebars', exphbs({
-    defaultLayout: 'main'
-}));
-app.set('view engine', 'handlebars');
 
-require('./controllers/burger_controllers.js')(app); 
+require('./controllers/controller.js')(app); 
 
 
 app.listen(PORT, function() {

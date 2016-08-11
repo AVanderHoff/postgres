@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>jobs add dummy </title>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<body>
+	
+
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">AV</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">ECO</a></li>
+            <li><a href="#">Create AR</a></li>
+            <li><a href="#">View AR </a></li>
+            <li><a href="#">Alerts</a></li>
+          </ul>
+        </li>
+      </ul>
+
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+	<div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Choose Level
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li role="presentation"><a role="menuitem" id="level1" tabindex="-1" >1</a></li>
+            <li role="presentation"><a role="menuitem" id="level2" tabindex="-1" >2</a></li>
+            <li role="presentation"><a role="menuitem" id="level3" tabindex="-1" >3</a></li>
+            <li role="presentation"><a role="menuitem" id="level4" tabindex="-1" >4</a></li>
+            <li role="presentation"><a role="menuitem" id="level5" tabindex="-1" >5</a></li>
+            </ul>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class = "container">
+		<div class = "row">
+			<div class = "col-md-12">
+				<div class="panel panel-primary">
+						<div class="panel-heading">
+							
+						</div>
+						<div class="panel-body">
+
+
+							<form >
+								<div class="form-group">
+									<h4 class=""><strong>Name</strong></h4>
+									<input type="text" class="form-control " id="partName"  />
+
+									<h4 class=""><strong>Description</strong></h4>
+									<input type="text" class="form-control " id="partDescription"  />
+
+									
+
+									</div>
+
+								
+								
+							</form>
+							<div class="pull-right">
+									<button type="button" class="btn btn-danger" id="submit"><h4>Submit</h4></button>
+								</div>
+						</div>
+					</div>
+
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-primary">
+						
+						<div class="panel-body">
+						</div>
+	</div>
+	<div class="panel panel-primary">
+	
+						<div class="panel-body">
+						</div>
+	</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+<!--
+<script type = "text/javascript">
+
+var currentURL = window.location.origin;
+
+function postdata(){
+
+	var employerIDforeign = $('#employerIDforeign').val().trim();
+	var title = $('#title').val().trim();
+	var jobLocation = $('#jobLocation').val().trim();
+	var description = $('#description').val().trim();
+	var keywords = $('#keywords').val().trim();
+	
+
+	var obj = {
+		employerIDforeign:employerIDforeign,
+		title:title,
+		jobLocation:jobLocation,
+		description:description,
+		keywords:keywords
+		
+
+	}
+	
+
+	$.post(currentURL + "/jobspost" , obj);
+		
+		
+		
+	
+
+
+
+}
+
+$('#submit').on('click',function(){
+	postdata();
+	console.log('clicked');
+})
+
+
+
+</script>
+
+-->
