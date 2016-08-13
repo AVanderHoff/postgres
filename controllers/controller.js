@@ -56,6 +56,64 @@ app.put('/update', function(req,res){
 
 });
 
+app.get('/part/:id', function(req,res){
+
+	var id = req.params.id ;
+	console.log(id);
+
+
+	// Level1.findAll({}).then(function(result){ 
+ //          res.json(result);
+ //      })
+
+	switch(id){
+		case "1":Level1.findAll({}).then(function(result){ 
+          res.json(result);
+      });
+		break;
+		default:
+		 console.log('good');
+
+
+
+
+
+
+	}
+  
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  });
+	
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
 app.put('/change', function(req,res){
 
  
