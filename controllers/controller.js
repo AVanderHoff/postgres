@@ -61,25 +61,33 @@ app.get('/part/:id', function(req,res){
 	var id = req.params.id ;
 	console.log(id);
 
+	obj = {top:[],
+		   bottom:[]
+	};
 
-	// Level1.findAll({}).then(function(result){ 
- //          res.json(result);
- //      })
+
+
 
 	switch(id){
-		case "1":Level1.findAll({}).then(function(result){ 
-          res.json(result);
-      });
+		case "1":Level2.findAll({}).then(function(result){ 
+          			obj.top = result;
+          			res.json(obj);
+      			 });
+      	break;
+		case "2":Level1.findAll({}).then(function(result){
+				 	Level3.findAll({}).then(function(result2){
+				 		obj.top = result;
+				 		obj.bottom = result2;
+				 		res.json(obj);
+				 	})
+				})
 		break;
-		default:
-		 console.log('good');
+		case "3":Level2.findAll({}).then(function(result){
+					obj.top = result;
+					res.json(obj);
+				})
 
-
-
-
-
-
-	}
+		}
   
      
 

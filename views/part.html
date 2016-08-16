@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>jobs add dummy </title>
+<title>part </title>
 
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
@@ -114,14 +114,14 @@
 		</div>
 	</div>
 
-	<div class="panel panel-primary">
+	<div class="panel panel-primary" >
 						
-						<div class="panel-body">
+						<div class="panel-body" id="top">
 						</div>
 	</div>
 	<div class="panel panel-primary">
 	
-						<div class="panel-body">
+						<div class="panel-body" id="bottom">
 						</div>
 	</div>
 
@@ -173,11 +173,21 @@ $('.level').on('click',function(){
 	
 	var level = $(this).attr('data');
 
-	
+	//must fix currently not putting data into div
 	$.get(currentURL + "/part/"+ level , function(data){
-
 		console.log(data);
+		var ulTop = $('<ul>');
+		var ulBottom = $('<ul>');
 
+
+		for(var i = 0 ; i < data.top.length ; i++){
+			var liTop = ('<li' + data.top[i].partDescription + '>')
+			ulTop.append(liTop);
+		}
+		$('#top').append(ulTop);
+
+	
+	
 	})
 
 

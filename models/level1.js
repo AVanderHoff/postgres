@@ -15,7 +15,7 @@ var Level1 = sequelize.define("level1", {
 		type: Sequelize.STRING
 	},
 	partDescription: {
-		type: Sequelize.BOOLEAN
+		type: Sequelize.STRING
 	},
 	oneTotwo:{
 		type:Sequelize.INTEGER
